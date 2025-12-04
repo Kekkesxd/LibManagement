@@ -28,6 +28,9 @@ public class Member {
     public void setBooksborrowed(int booksborrowed){
         this.booksborrowed = booksborrowed;
     }
+    public void setMaxBooksAllowed(int maxBooksAllowed){
+        this.maxBooksAllowed = maxBooksAllowed;
+    }
 
     //Getters
     public String getName(){
@@ -36,5 +39,17 @@ public class Member {
     public String getMemID(){
         return memID;
     }
-    
+    public String getEmail(){
+        return email;
+    }
+    public int getNumber(){
+        return number;
+    }
+    public int getBooksborrowed(){
+        return booksborrowed;
+    }
+    public int getMaxBooksAllowed(){
+        return maxBooksAllowed;
+    }
+
 }

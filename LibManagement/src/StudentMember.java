@@ -1,2 +1,7 @@
-public class StudentMember {
+
+
+
+public class StudentMember extends Member {
+
+
 }
