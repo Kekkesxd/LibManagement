@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34de9396-b8e4-4125-99fd-12b9eabe7fec" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/MemberTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentMember.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +46,9 @@
     "JUnit.BookTest.constructor_throwsException_whenTotalCopiesIsZero.executor": "Run",
     "JUnit.BookTest.executor": "Run",
     "JUnit.BookTest.sanityTest.executor": "Run",
+    "JUnit.MemberTest.calculateLateFee_chargesLowerRate_forStudents.executor": "Run",
+    "JUnit.MemberTest.executor": "Run",
+    "JUnit.MemberTest.student_maxbooksallowed.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -62,42 +67,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.BookTest">
+  <component name="RunManager" selected="JUnit.MemberTest.student_maxbooksallowed">
     <configuration name="BookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibManagement" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BookTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookTest.borrowCopy_failsWhenNoCopiesLeft" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LibManagement" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BookTest" />
-      <option name="METHOD_NAME" value="borrowCopy_failsWhenNoCopiesLeft" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookTest.borrowCopy_reducesAvailableCopies" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LibManagement" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BookTest" />
-      <option name="METHOD_NAME" value="borrowCopy_reducesAvailableCopies" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookTest.constructor_throwsException_whenTotalCopiesIsZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LibManagement" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BookTest" />
-      <option name="METHOD_NAME" value="constructor_throwsException_whenTotalCopiesIsZero" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -112,13 +87,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MemberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibManagement" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MemberTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberTest.calculateLateFee_chargesLowerRate_forStudents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibManagement" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MemberTest" />
+      <option name="METHOD_NAME" value="calculateLateFee_chargesLowerRate_forStudents" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberTest.student_maxbooksallowed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibManagement" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MemberTest" />
+      <option name="METHOD_NAME" value="student_maxbooksallowed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MemberTest.student_maxbooksallowed" />
+        <item itemvalue="JUnit.MemberTest" />
+        <item itemvalue="JUnit.MemberTest.calculateLateFee_chargesLowerRate_forStudents" />
         <item itemvalue="JUnit.BookTest" />
         <item itemvalue="JUnit.BookTest.sanityTest" />
-        <item itemvalue="JUnit.BookTest.borrowCopy_reducesAvailableCopies" />
-        <item itemvalue="JUnit.BookTest.constructor_throwsException_whenTotalCopiesIsZero" />
-        <item itemvalue="JUnit.BookTest.borrowCopy_failsWhenNoCopiesLeft" />
       </list>
     </recent_temporary>
   </component>
@@ -141,6 +145,7 @@
       <workItem from="1764933950079" duration="1785000" />
       <workItem from="1765103883115" duration="16031000" />
       <workItem from="1765891579625" duration="7076000" />
+      <workItem from="1765972439081" duration="2690000" />
     </task>
     <servers />
   </component>

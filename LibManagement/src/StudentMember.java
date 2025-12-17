@@ -8,24 +8,19 @@ public class StudentMember extends Member {
 
 
 
-    //increasing how many books can be borrowed for students
-    public StudentMember(){
-        super.setBooksborrowed(3);
+    public StudentMember(String name, String memberId, String email, int number, String stuID, String department) {
+        super(name, memberId, email, number, 4); // students get more books
+        this.stuID = stuID;
+        this.department = department;
     }
 
     //decreasing the fee for student members
     @Override
-    public double CalcFee(long daysLate){
+    public double calcLateFee(long daysLate){
+        if(daysLate <= 0){
+            return 0;
+        }
         return 2.5 * daysLate;
-    }
-
-
-    //setters
-    public void setStuID(String stuID){
-        this.stuID = stuID;
-    }
-    public void setDepartment(String department){
-        this.department= department;
     }
 
     //Getters
