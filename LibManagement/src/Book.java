@@ -79,6 +79,5 @@ public class Book implements Searchable {
     public int getTotalCopies() {
         return totalCopies;
     }
-    
 }
 

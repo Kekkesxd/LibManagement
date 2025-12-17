@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34de9396-b8e4-4125-99fd-12b9eabe7fec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibManagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibManagement.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Searchable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Searchable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.BookTest.borrowCopy_reducesAvailableCopies">
+  <component name="RunManager" selected="JUnit.BookTest">
     <configuration name="BookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibManagement" />
       <option name="PACKAGE_NAME" value="" />
@@ -116,11 +114,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookTest" />
+        <item itemvalue="JUnit.BookTest.sanityTest" />
         <item itemvalue="JUnit.BookTest.borrowCopy_reducesAvailableCopies" />
         <item itemvalue="JUnit.BookTest.constructor_throwsException_whenTotalCopiesIsZero" />
         <item itemvalue="JUnit.BookTest.borrowCopy_failsWhenNoCopiesLeft" />
-        <item itemvalue="JUnit.BookTest" />
-        <item itemvalue="JUnit.BookTest.sanityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +140,7 @@
       <workItem from="1764863500866" duration="3084000" />
       <workItem from="1764933950079" duration="1785000" />
       <workItem from="1765103883115" duration="16031000" />
-      <workItem from="1765891579625" duration="4058000" />
+      <workItem from="1765891579625" duration="7076000" />
     </task>
     <servers />
   </component>

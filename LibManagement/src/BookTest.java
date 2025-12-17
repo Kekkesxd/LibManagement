@@ -26,5 +26,17 @@ public class BookTest {
         );
     }
 
+    @Test
+    void returnCopy_increasesAvailableCopiesUpToTotal() {
+        Book book = new Book(1, "Test", "Author", 2023, "Cat", 1);
+
+        book.borrowCopy();
+        System.out.println("Now only: " + book.getAvailableCopies());
+        book.returnCopy();
+        System.out.println("Returned: " + book.getAvailableCopies());
+
+        assertEquals(1, book.getAvailableCopies());
+    }
+
 
 }
