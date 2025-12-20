@@ -8,8 +8,8 @@ public class StudentMember extends Member {
 
 
 
-    public StudentMember(String name, String memberId, String email, int number, String stuID, String department) {
-        super(name, memberId, email, number, 4); // students get more books
+    public StudentMember(String name, String memberId, String email, int number, int maxBooksAllowed, String stuID, String department) {
+        super(name, memberId, email, number, 4);
         this.stuID = stuID;
         this.department = department;
     }

@@ -1,0 +1,3 @@
+bookId,memberId,loanDate,dueDate,returnDate,returned
+1,M1,2025-12-01,2025-12-15,,false
+2,M2,2025-12-02,2025-12-16,2025-12-10,true

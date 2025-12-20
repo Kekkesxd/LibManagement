@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34de9396-b8e4-4125-99fd-12b9eabe7fec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MemberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CsvLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LibManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LibraryCLI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LoanTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Paginator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/books.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/loans.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/members.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MemberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MemberTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StudentMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentMember.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +55,8 @@
     "JUnit.BookTest.constructor_throwsException_whenTotalCopiesIsZero.executor": "Run",
     "JUnit.BookTest.executor": "Run",
     "JUnit.BookTest.sanityTest.executor": "Run",
+    "JUnit.LibManagerTest.executor": "Run",
+    "JUnit.LoanTest.executor": "Run",
     "JUnit.MemberTest.calculateLateFee_chargesLowerRate_forStudents.executor": "Run",
     "JUnit.MemberTest.executor": "Run",
     "JUnit.MemberTest.student_maxbooksallowed.executor": "Run",
@@ -67,22 +78,33 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MemberTest.student_maxbooksallowed">
-    <configuration name="BookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KekkersV2\Desktop\LibManagement\LibManagement\src\data" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="LibManagement" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibManagement" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BookTest" />
+      <option name="MAIN_CLASS_NAME" value="LibManagerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookTest.sanityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibManagement" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BookTest" />
-      <option name="METHOD_NAME" value="sanityTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="LoanTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -92,16 +114,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MemberTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MemberTest.calculateLateFee_chargesLowerRate_forStudents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LibManagement" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MemberTest" />
-      <option name="METHOD_NAME" value="calculateLateFee_chargesLowerRate_forStudents" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.LibManagerTest" />
+        <item itemvalue="JUnit.LoanTest" />
         <item itemvalue="JUnit.MemberTest.student_maxbooksallowed" />
         <item itemvalue="JUnit.MemberTest" />
-        <item itemvalue="JUnit.MemberTest.calculateLateFee_chargesLowerRate_forStudents" />
-        <item itemvalue="JUnit.BookTest" />
-        <item itemvalue="JUnit.BookTest.sanityTest" />
       </list>
     </recent_temporary>
   </component>
@@ -145,7 +157,8 @@
       <workItem from="1764933950079" duration="1785000" />
       <workItem from="1765103883115" duration="16031000" />
       <workItem from="1765891579625" duration="7076000" />
-      <workItem from="1765972439081" duration="2690000" />
+      <workItem from="1765972439081" duration="4470000" />
+      <workItem from="1766222743880" duration="7797000" />
     </task>
     <servers />
   </component>

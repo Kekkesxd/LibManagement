@@ -1,5 +1,4 @@
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MemberTest {
@@ -34,32 +33,33 @@ public class MemberTest {
     }
 
     @Test
-        void calculateLateFee_chargesLowerRate_forStudents() {
-            StudentMember s = new StudentMember(
-                    "S", "M2", "s@test.com", 777,
-                    "S123", "CS"
-            );
+    void calculateLateFee_chargesLowerRate_forStudents() {
+        StudentMember s = new StudentMember(
+                "S", "M2", "s@test.com", 777,
+                4, "S123", "CS"
+        );
 
-            assertEquals(7.5, s.calcLateFee(3)); // 2.5 * 3
-            assertEquals(0.0, s.calcLateFee(0));
-        }
+        assertEquals(7.5, s.calcLateFee(3));
+        assertEquals(0.0, s.calcLateFee(0));
+    }
 
-        @Test
-        void polymorphism_callsOverriddenMethod_throughMemberReference() {
-            Member m = new StudentMember(
-                    "S", "M2", "s@test.com", 777,
-                    "S123", "CS"
-            );
+    @Test
+    void polymorphism_callsOverriddenMethod_throughMemberReference() {
+        Member m = new StudentMember(
+                "S", "M2", "s@test.com", 777,
+                4, "S123", "CS"
+        );
 
-            assertEquals(7.5, m.calcLateFee(3));
-        }
+        assertEquals(7.5, m.calcLateFee(3));
+    }
 
+    @Test
+    void student_maxBooksAllowed_isFour() {
+        Member m = new StudentMember(
+                "F", "N22", "a@test.com", 20000039,
+                4, "S1322", "CS"
+        );
 
-        @Test
-    void student_maxbooksallowed(){
-        Member f = new StudentMember("F", "N22", "a@test.com", 20000039, "S1322", "CS");
-
-        assertEquals(4, f.getMaxBooksAllowed());
-        }
-
+        assertEquals(4, m.getMaxBooksAllowed());
+    }
 }
