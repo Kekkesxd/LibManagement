@@ -7,7 +7,7 @@ public class Member {
     private int maxBooksAllowed;
 
 
-    //construct
+    //constructor that allows a custom borrowing limit
     public Member(String name, String memID, String email, int number, int maxBooksAllowed){
         this.name = name;
         this.memID = memID;
@@ -16,6 +16,7 @@ public class Member {
         this.maxBooksAllowed = maxBooksAllowed;
     }
 
+    //constructor with defaults borrowing limit of 2
     public Member(String name, String memID, String email, int number){
         this(name, memID, email, number, 2);
     }

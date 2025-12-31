@@ -26,7 +26,7 @@ public class DbSeeder{
     private static final Path OUT_DIR = Path.of("src/data");
     private static final int N_BOOKS = 250;
     private static final int N_MEMBERS = 120;
-    private static final int N_ACTIVE_LOANS = 180;
+    private static final int N_ACTIVE_LOANS = 100;
     private static final int N_RETURNED_LOANS = 400;
 
     // categories you already use in your project
@@ -307,7 +307,7 @@ public class DbSeeder{
     private static List<MemberRow> generateMembers(int n) {
         List<MemberRow> members = new ArrayList<>(n);
         for (int i = 1; i <= n; i++) {
-            String memberId = String.format("M%03d", i);
+            String memberId = "M" + i;
             String name = FIRST_NAMES[rng.nextInt(FIRST_NAMES.length)] + " " + (char)('A' + (i % 26));
             String email = memberId.toLowerCase() + "@test.com";
             int number = 100000 + rng.nextInt(900000);

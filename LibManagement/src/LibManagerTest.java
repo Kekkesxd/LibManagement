@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class LibManagerTest {
 
+
+    //Tests if borrowing succeeds when member and book are registered, limit (max books allowed) not reached and a copy is available
     @Test
     void borrowBook_succeeds_whenRulesAreSatisfied() {
         LibManager manager = new LibManager();
@@ -19,6 +21,8 @@ public class LibManagerTest {
         assertEquals(0, book.getAvailableCopies());
     }
 
+
+    //Test borrowing when the maxBooksAllowed is exceeded
     @Test
     void borrowBook_throwsException_whenLimitExceeded() {
         LibManager manager = new LibManager();
@@ -60,7 +64,7 @@ public class LibManagerTest {
         assertEquals(1, book.getAvailableCopies());
         assertEquals(0, manager.getActiveLoansMember(member).size());
     }
-//Members viewing their own loans
+//Testing member loan view, it shows only the loans for only one member
 @Test
 void getActiveLoansForMember_returnsOnlyMembersLoans() {
     LibManager manager = new LibManager();

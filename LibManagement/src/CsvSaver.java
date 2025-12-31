@@ -4,8 +4,11 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 
+//Util Class that saves updated library data back into CSV files
+//Use after borrow/return so the database stays persistent
 public class CsvSaver {
 
+    //Saves all books into books.csv
     public static void saveBooks(String filePath, List<Book> books) throws IOException {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
             bw.write("id,title,author,year,category,totalCopies,availableCopies");
@@ -24,6 +27,7 @@ public class CsvSaver {
         }
     }
 
+    //Saves all loans into loans.csv
     public static void saveLoans(String filePath, List<Loan> loans) throws IOException {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
             bw.write("bookId,memberId,loanDate,dueDate,returnDate,returned");
@@ -49,6 +53,7 @@ public class CsvSaver {
     }
 
     // Minimal CSV escaping (handles commas/quotes)
+    // Remove commas and special characters to prevent CSV parsing errors
     private static String escape(String s) {
         if (s == null) return "";
         if (s.contains(",") || s.contains("\"")) {

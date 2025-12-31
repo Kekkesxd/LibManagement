@@ -9,7 +9,7 @@ public class Book implements Searchable {
     private int totalCopies;
     private int availableCopies;
 
-    //construct
+    //Constructor for book data and copy counts
     public Book(int id, String title, String author, int year, String category, int totalCopies){
         if(totalCopies <= 0 ){
             throw new IllegalArgumentException("Total copies must be greater than 0");
@@ -25,6 +25,8 @@ public class Book implements Searchable {
     }
 
     //methods
+
+    //for borrowing books, works if there are available copies
     public boolean borrowCopy(){
         if(availableCopies > 0 ){
             --availableCopies;
@@ -32,6 +34,8 @@ public class Book implements Searchable {
         }
         return false;
     }
+
+    //returns the borrowed copies and adds them to available copies while making sure only the owned/total copies are returned
     public void returnCopy(){
         if(totalCopies > availableCopies){
             availableCopies++;

@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 
+//Represents a single book loan in the library
 public class Loan {
     private Book book;
     private Member member;
@@ -8,7 +9,7 @@ public class Loan {
     private LocalDate returnDate;
     private boolean returned;
 
-
+    //Creates a new loan and then sets the duedate to 14 days after the book has been loaned
     public Loan(Book book, Member member, LocalDate loanDate){
         this.book = book;
         this.member = member;
@@ -18,6 +19,7 @@ public class Loan {
         this.returnDate = null;
     }
 
+    //Marks the loan as returned and restores the book availability
     public void markReturned(LocalDate returnDate){
         if(returned){
             return;
@@ -27,6 +29,13 @@ public class Loan {
             book.returnCopy();
         }
     }
+
+    // Used ONLY when loading from CSV so we don't change book availability.
+    public void loadAsReturned(LocalDate returnDate) {
+        this.returnDate = returnDate;
+        this.returned = true;
+    }
+
     //Getters
     public Book getBook(){
         return book;

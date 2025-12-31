@@ -1,13 +1,9 @@
-
-
-
 public class StudentMember extends Member {
 
     private String stuID;
     private String department;
 
-
-
+    //Constructor for Student members that forces the max borrow limit to 4
     public StudentMember(String name, String memberId, String email, int number, int maxBooksAllowed, String stuID, String department) {
         super(name, memberId, email, number, 4);
         this.stuID = stuID;
