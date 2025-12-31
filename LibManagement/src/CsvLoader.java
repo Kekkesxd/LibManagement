@@ -116,12 +116,6 @@ public class CsvLoader {
                         throw new IllegalStateException("returned=true but returnDate empty for bookId=" + bookId);
                     }
                     loan.markReturned(LocalDate.parse(returnDateStr));
-                } else {
-                    // If loan is active, the book must be unavailable for that copy
-                    // so we "borrow" a copy now to reflect the active loan in availability
-                    if (!book.borrowCopy()) {
-                        throw new IllegalStateException("Not enough copies for active loan bookId=" + bookId);
-                    }
                 }
 
                 loans.add(loan);

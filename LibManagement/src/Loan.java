@@ -43,5 +43,8 @@ public class Loan {
     public LocalDate getDueDate(){
         return dueDate;
     }
+    public LocalDate getLoanDate(){
+        return loanDate;
+    }
 
 }

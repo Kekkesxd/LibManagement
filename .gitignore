@@ -31,3 +31,8 @@ bin/
 
 .idea/
 **/.idea/
+
+.venv/
+*.iml
+out/
+

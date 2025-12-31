@@ -7,8 +7,7 @@ public class Member {
     private int maxBooksAllowed;
 
 
-
-
+    //construct
     public Member(String name, String memID, String email, int number, int maxBooksAllowed){
         this.name = name;
         this.memID = memID;

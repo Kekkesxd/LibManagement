@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.*;
@@ -16,6 +17,21 @@ public class LibManager {
     }
 
     //Methods
+
+    public Book findBookById(int id){
+        for (Book b : books){
+            if(b.getId() == id) return b;
+        }
+        return null;
+    }
+
+    public Member findMemberById(String memberId){
+        for(Member m : members){
+            if(m.getMemID().equalsIgnoreCase(memberId)) return m;
+        }
+        return null;
+    }
+
     private int countActiveLoans(Member member){
         int count = 0;
         for (Loan loan : loans){
@@ -39,6 +55,9 @@ public class LibManager {
         if(activeLoans>=member.getMaxBooksAllowed()){
             throw new IllegalStateException("Already reached max borrow limit");
         }
+        if (hasAcitveLoan(member, book)){
+            throw new IllegalStateException("Member Already has this book on loan");
+        }
         if (!book.borrowCopy()){
             throw new IllegalStateException("No Available copies of this book");
         }
@@ -49,11 +68,26 @@ public class LibManager {
         return true;
     }
 
-    public void returnBook(Member member, Book book, LocalDate returnDate){
+    private boolean hasAcitveLoan(Member member, Book book){
+        for(Loan loan : loans){
+            if(!loan.isReturned() && loan.getMember().equals(member) && loan.getBook().equals(book)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public double returnBook(Member member, Book book, LocalDate returnDate){
         for (Loan loan : loans){
             if(!loan.isReturned() && loan.getMember().equals(member) && loan.getBook().equals(book)){
                 loan.markReturned(returnDate);
-                return;
+
+                long daysLate = ChronoUnit.DAYS.between(loan.getDueDate(), returnDate);
+                if (daysLate<= 0){
+                    return 0.0;
+                }
+
+                return member.calcLateFee(daysLate);
             }
         }
 
@@ -67,6 +101,10 @@ public class LibManager {
 
     public void addMember(Member member){
         members.add(member);
+    }
+
+    public List<Book> getBooks(){
+        return new ArrayList<>(books);
     }
     //To view All loans by system/Admin
     public List<Loan> getLoans(){
@@ -111,5 +149,4 @@ public class LibManager {
         this.members.addAll(CsvLoader.loadMembers(membersPath));
         this.loans.addAll(CsvLoader.loadLoans(loansPath, this.books, this.members));
     }
-
 }

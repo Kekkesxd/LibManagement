@@ -5,20 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34de9396-b8e4-4125-99fd-12b9eabe7fec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CsvLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LibManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LibraryCLI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LoanTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Paginator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/books.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/loans.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/members.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CsvSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibManagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibManagement.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CsvLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CsvLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LibManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryCLI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MemberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MemberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/books.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/loans.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/members.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +29,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Python Script" />
         <option value="Class" />
       </list>
     </option>
@@ -48,6 +49,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.DbSeeder.executor": "Run",
     "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.BookTest.borrowCopy_failsWhenNoCopiesLeft.executor": "Run",
@@ -61,6 +63,7 @@
     "JUnit.MemberTest.executor": "Run",
     "JUnit.MemberTest.student_maxbooksallowed.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.generate_db.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -75,6 +78,10 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/KekkersV2/Desktop/LibManagement/LibManagement/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -83,7 +90,14 @@
       <recent name="C:\Users\KekkersV2\Desktop\LibManagement\LibManagement\src\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.DbSeeder">
+    <configuration name="DbSeeder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DbSeeder" />
+      <module name="LibManagement" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="LibManagement" />
@@ -109,32 +123,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="generate_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LibManagement" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MemberTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MemberTest.student_maxbooksallowed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LibManagement" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MemberTest" />
-      <option name="METHOD_NAME" value="student_maxbooksallowed" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/generate_db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DbSeeder" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Python.generate_db" />
         <item itemvalue="JUnit.LibManagerTest" />
         <item itemvalue="JUnit.LoanTest" />
-        <item itemvalue="JUnit.MemberTest.student_maxbooksallowed" />
-        <item itemvalue="JUnit.MemberTest" />
       </list>
     </recent_temporary>
   </component>
@@ -158,11 +173,29 @@
       <workItem from="1765103883115" duration="16031000" />
       <workItem from="1765891579625" duration="7076000" />
       <workItem from="1765972439081" duration="4470000" />
-      <workItem from="1766222743880" duration="7797000" />
+      <workItem from="1766222743880" duration="8095000" />
+      <workItem from="1767177955200" duration="11066000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/LibManagement$generate_db.coverage" NAME="generate_db Coverage Results" MODIFIED="1767191211465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
