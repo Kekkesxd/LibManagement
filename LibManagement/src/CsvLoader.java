@@ -62,23 +62,20 @@ public class CsvLoader {
                 String name = p[2].trim();
                 String email = p[3].trim();
                 int number = Integer.parseInt(p[4].trim());
-                int maxBooksAllowed = Integer.parseInt(p[5].trim());
+
 
                 //create correct member type based on CSV
                 if (type.equalsIgnoreCase("REG")) {
+                    int maxBooksAllowed = Integer.parseInt(p[5].trim());
                     members.add(
-                            new Member(name, memberId, email, number, maxBooksAllowed)
-                    );
+                            new Member(name, memberId, email, number, maxBooksAllowed));
                 } else if (type.equalsIgnoreCase("STU")) {
                     String studentId = p[6].trim();
                     String department = p[7].trim();
 
                     members.add(
                             new StudentMember(
-                                    name, memberId, email, number,
-                                    maxBooksAllowed, studentId, department
-                            )
-                    );
+                                    name, memberId, email, number, studentId, department));
                 } else {
                     throw new IllegalArgumentException("Unknown member type: " + type);
                 }
@@ -88,7 +85,7 @@ public class CsvLoader {
         return members;
     }
 
-    //Ensures in-memory book availability exactly matches active loans in CSV
+    //Loads loans from csv and validates references and dates
     public static List<Loan> loadLoans(String filePath, List<Book> books, List<Member> members) throws IOException {
         List<Loan> loans = new ArrayList<>();
 

@@ -1,6 +1,10 @@
 import java.time.LocalDate;
 
-//Represents a single book loan in the library
+/*
+* Represents a single loan in the library system
+* Links a book and a member, stores the loan/due/return dates and tracks if the book been returned or not
+ */
+
 public class Loan {
     private Book book;
     private Member member;
@@ -11,12 +15,16 @@ public class Loan {
 
     //Creates a new loan and then sets the duedate to 14 days after the book has been loaned
     public Loan(Book book, Member member, LocalDate loanDate){
+        if(book == null || member == null || loanDate == null){
+        throw new IllegalArgumentException("Book, member and loanDate must not be null");
+    }
         this.book = book;
         this.member = member;
         this.loanDate = loanDate;
         this.dueDate = loanDate.plusDays(14);
         this.returned = false;
         this.returnDate = null;
+
     }
 
     //Marks the loan as returned and restores the book availability

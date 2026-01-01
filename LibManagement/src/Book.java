@@ -1,3 +1,9 @@
+/*
+* Represents a book in the library
+* Stores book details and manages the available and total copies of the book
+* implements Searchable to allow keyword-based searching
+ */
+
 public class Book implements Searchable {
 
     private int id;
@@ -42,6 +48,7 @@ public class Book implements Searchable {
         }
     }
 
+    //Checks if the book matches a search keyword
     @Override
     public boolean matches(String keyword) {
         if (keyword == null) {

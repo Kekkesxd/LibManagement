@@ -1,3 +1,8 @@
+/*
+* Respresents a library member
+* Stores member details and borrowing rules
+* Can be extended by different member types in the future
+ */
 
 public class Member {
     private String name;
@@ -16,7 +21,7 @@ public class Member {
         this.maxBooksAllowed = maxBooksAllowed;
     }
 
-    //constructor with defaults borrowing limit of 2
+    //constructor with default borrowing limit of 2
     public Member(String name, String memID, String email, int number){
         this(name, memID, email, number, 2);
     }

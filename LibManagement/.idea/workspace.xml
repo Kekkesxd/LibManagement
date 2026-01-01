@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="34de9396-b8e4-4125-99fd-12b9eabe7fec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/loans.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/loans.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +42,16 @@
     "JUnit.BookTest.borrowCopy_failsWhenNoCopiesLeft.executor": "Run",
     "JUnit.BookTest.borrowCopy_reducesAvailableCopies.executor": "Run",
     "JUnit.BookTest.constructor_throwsException_whenTotalCopiesIsZero.executor": "Run",
-    "JUnit.BookTest.executor": "Run",
+    "JUnit.BookTest.executor": "Debug",
+    "JUnit.BookTest.returnCopy_increasesAvailableCopiesUpToTotal.executor": "Run",
     "JUnit.BookTest.sanityTest.executor": "Run",
     "JUnit.LibManagerTest.executor": "Run",
     "JUnit.LoanTest.executor": "Run",
     "JUnit.MemberTest.calculateLateFee_chargesFivePerDay_whenLate.executor": "Run",
     "JUnit.MemberTest.calculateLateFee_chargesLowerRate_forStudents.executor": "Run",
     "JUnit.MemberTest.executor": "Run",
+    "JUnit.MemberTest.polymorphism_callsOverriddenMethod_throughMemberReference.executor": "Run",
+    "JUnit.MemberTest.student_maxBooksAllowed_isFour.executor": "Run",
     "JUnit.MemberTest.student_maxbooksallowed.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.generate_db.executor": "Run",
@@ -99,29 +100,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MemberTest.calculateLateFee_chargesLowerRate_forStudents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibManagement" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoanTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="MemberTest" />
+      <option name="METHOD_NAME" value="calculateLateFee_chargesLowerRate_forStudents" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MemberTest.polymorphism_callsOverriddenMethod_throughMemberReference" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibManagement" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MemberTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="polymorphism_callsOverriddenMethod_throughMemberReference" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MemberTest.calculateLateFee_chargesFivePerDay_whenLate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MemberTest.student_maxBooksAllowed_isFour" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibManagement" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MemberTest" />
-      <option name="METHOD_NAME" value="calculateLateFee_chargesFivePerDay_whenLate" />
+      <option name="METHOD_NAME" value="student_maxBooksAllowed_isFour" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,10 +133,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MemberTest" />
-        <item itemvalue="JUnit.MemberTest.calculateLateFee_chargesFivePerDay_whenLate" />
-        <item itemvalue="JUnit.LoanTest" />
         <item itemvalue="JUnit.LibManagerTest" />
+        <item itemvalue="JUnit.MemberTest.student_maxBooksAllowed_isFour" />
+        <item itemvalue="JUnit.MemberTest.polymorphism_callsOverriddenMethod_throughMemberReference" />
+        <item itemvalue="JUnit.MemberTest.calculateLateFee_chargesLowerRate_forStudents" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +162,8 @@
       <workItem from="1765972439081" duration="4470000" />
       <workItem from="1766222743880" duration="8095000" />
       <workItem from="1767177955200" duration="11908000" />
-      <workItem from="1767195703427" duration="19822000" />
+      <workItem from="1767195703427" duration="19937000" />
+      <workItem from="1767264160907" duration="6600000" />
     </task>
     <servers />
   </component>

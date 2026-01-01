@@ -18,7 +18,7 @@ public class LibraryCLI {
         this.loansPaths = loansPaths;
     }
 
-    //Main menu loop
+    //Main menu loop: keeps running until Quit is picked
     public void run() {
         while (true) {
             System.out.println("\n=== Library Menu ===");
@@ -54,7 +54,7 @@ public class LibraryCLI {
         }
 
 
-        System.out.println("Sort by: 1) Title  2) Author  3) Category 4) Availalibity 5) ID");
+        System.out.println("Sort by: 1) Title  2) Author  3) Category 4) Availability 5) ID");
         System.out.print("Choice: ");
         String sortChoice = scanner.nextLine().trim();
 
@@ -75,8 +75,8 @@ public class LibraryCLI {
             }
         }
 
-        int pageSize = 25;
-        Paginator<Book> paginator = new Paginator<>(results, pageSize);
+        int pageSize = 25; //How many books shown per page
+        Paginator<Book> paginator = new Paginator<>(results, pageSize); //Displays all books with sorting + pagination
         int page = 0;
 
         while (true) {

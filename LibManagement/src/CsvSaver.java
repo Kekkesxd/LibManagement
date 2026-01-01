@@ -53,7 +53,7 @@ public class CsvSaver {
     }
 
     // Minimal CSV escaping (handles commas/quotes)
-    // Remove commas and special characters to prevent CSV parsing errors
+    // wraps text in quotes if it contains commas or quotes
     private static String escape(String s) {
         if (s == null) return "";
         if (s.contains(",") || s.contains("\"")) {
