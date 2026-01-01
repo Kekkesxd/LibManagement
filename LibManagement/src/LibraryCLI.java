@@ -47,35 +47,32 @@ public class LibraryCLI {
 
     private void browseBooksFlow(){
         List<Book> results = new ArrayList<>(manager.getBooks());
-        int zeros = 0;
-        int min = Integer.MAX_VALUE;
 
-        for (Book b : results) {
-            zeros += (b.getAvailableCopies() == 0) ? 1 : 0;
-            min = Math.min(min, b.getAvailableCopies());
-        }
         if(results.isEmpty()){
             System.out.println("Library is Empty");
             return;
         }
 
 
-        System.out.println("DEBUG: zeros=" + zeros + " | minAvailable=" + min);
-
         System.out.println("Sort by: 1) Title  2) Author  3) Category 4) Availalibity 5) ID");
         System.out.print("Choice: ");
         String sortChoice = scanner.nextLine().trim();
 
-        if (sortChoice.equals("1")) {
-            results.sort((a, b) -> a.getTitle().compareToIgnoreCase(b.getTitle()));
-        } else if (sortChoice.equals("2")) {
-            results.sort((a, b) -> a.getAuthor().compareToIgnoreCase(b.getAuthor()));
-        } else if (sortChoice.equals("3")) {
-            results.sort((a, b) -> a.getCategory().compareToIgnoreCase(b.getCategory()));
-        } else if (sortChoice.equals("4")) {
-            results.sort((a, b) -> Integer.compare(b.getAvailableCopies(), a.getAvailableCopies()));
-        } else if (sortChoice.equals("5")) {
-            results.sort((a, b) -> Integer.compare(a.getId(), b.getId()));
+        switch (sortChoice) {
+            case "1" ->
+                    results.sort((a, b) -> a.getTitle().compareToIgnoreCase(b.getTitle()));
+            case "2" ->
+                    results.sort((a, b) -> a.getAuthor().compareToIgnoreCase(b.getAuthor()));
+            case "3" ->
+                    results.sort((a, b) -> a.getCategory().compareToIgnoreCase(b.getCategory()));
+            case "4" ->
+                    results.sort((a, b) -> Integer.compare(b.getAvailableCopies(), a.getAvailableCopies()));
+            case "5" ->
+                    results.sort((a, b) -> Integer.compare(a.getId(), b.getId()));
+            default -> {
+                System.out.println("Invalid sort option....Defaulting to ID");
+                results.sort((a, b) -> Integer.compare(a.getId(), b.getId()));
+            }
         }
 
         int pageSize = 25;
@@ -131,13 +128,17 @@ public class LibraryCLI {
             String sortChoice = scanner.nextLine().trim();
 
             //Sorting results
-            if (sortChoice.equals("1")) {
-                results.sort((a, b) -> a.getTitle().compareToIgnoreCase(b.getTitle()));
-            } else if (sortChoice.equals("2")) {
-                results.sort((a, b) -> a.getAuthor().compareToIgnoreCase(b.getAuthor()));
-            } else if (sortChoice.equals("3")) {
-                results.sort((a, b) -> Integer.compare(b.getAvailableCopies(), a.getAvailableCopies()));
+            switch (sortChoice) {
+                case "1" ->
+                        results.sort((a, b) -> a.getTitle().compareToIgnoreCase(b.getTitle()));
+                case "2" ->
+                        results.sort((a, b) -> a.getAuthor().compareToIgnoreCase(b.getAuthor()));
+                case "3" ->
+                        results.sort((a, b) -> Integer.compare(b.getAvailableCopies(), a.getAvailableCopies()));
+                default ->
+                        System.out.println("Invalid sort option, Keeping original order");
             }
+
 
             //How many books there is per page
             int pageSize = 30;

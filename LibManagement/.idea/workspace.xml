@@ -6,22 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="34de9396-b8e4-4125-99fd-12b9eabe7fec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CsvLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CsvLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CsvSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CsvSaver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DbSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DbSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LibraryCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paginator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paginator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Searchable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Searchable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StudentMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StudentMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/books.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/loans.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/members.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/loans.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/loans.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +48,7 @@
     "JUnit.BookTest.sanityTest.executor": "Run",
     "JUnit.LibManagerTest.executor": "Run",
     "JUnit.LoanTest.executor": "Run",
+    "JUnit.MemberTest.calculateLateFee_chargesFivePerDay_whenLate.executor": "Run",
     "JUnit.MemberTest.calculateLateFee_chargesLowerRate_forStudents.executor": "Run",
     "JUnit.MemberTest.executor": "Run",
     "JUnit.MemberTest.student_maxbooksallowed.executor": "Run",
@@ -71,6 +58,7 @@
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -95,13 +83,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="DbSeeder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DbSeeder" />
-      <module name="LibManagement" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="LibManagement" />
@@ -127,36 +108,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="generate_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="MemberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibManagement" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/generate_db.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MemberTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberTest.calculateLateFee_chargesFivePerDay_whenLate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibManagement" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MemberTest" />
+      <option name="METHOD_NAME" value="calculateLateFee_chargesFivePerDay_whenLate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.DbSeeder" />
-        <item itemvalue="Python.generate_db" />
-        <item itemvalue="JUnit.LibManagerTest" />
+        <item itemvalue="JUnit.MemberTest" />
+        <item itemvalue="JUnit.MemberTest.calculateLateFee_chargesFivePerDay_whenLate" />
         <item itemvalue="JUnit.LoanTest" />
+        <item itemvalue="JUnit.LibManagerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +159,7 @@
       <workItem from="1765972439081" duration="4470000" />
       <workItem from="1766222743880" duration="8095000" />
       <workItem from="1767177955200" duration="11908000" />
-      <workItem from="1767195703427" duration="15048000" />
+      <workItem from="1767195703427" duration="19822000" />
     </task>
     <servers />
   </component>
